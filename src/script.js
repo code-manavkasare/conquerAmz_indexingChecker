@@ -35,7 +35,7 @@ module.exports = async () => {
       }
     );
     console.log("Zipcode set with status code", res.statusCode);
-    const keywords = keywords_to_check.split(" ");
+    const keywords = keywords_to_check.split(",");
     let payload = {};
     for (var i = 0; i < keywords.length; i++) {
       const response = await rp(
